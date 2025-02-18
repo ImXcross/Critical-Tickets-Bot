@@ -1,0 +1,47 @@
+# Ticket Status Checker
+
+This PHP application checks the status of tickets stored in a database and removes those that are closed. Additionally, it retrieves and sends updates via WhatsApp using the Facebook API.
+
+# Características
+
+Connects to an SQL database to retrieve the list of active tickets.
+Checks ticket status via the GLPI API.
+Automatically deletes closed tickets from the database.
+Retrieves ticket follow-up messages.
+Sends WhatsApp messages to ticket-associated numbers using the Facebook API.
+Detailed logging of operations.
+
+# Instalación
+
+Clone or download this repository to your server.
+Ensure PHP is installed and the cURL extension is enabled.
+Configure the following values in the code:
+    GLPI API URL.
+    Authentication tokens (App Token, User Token, and Access Token).
+    Database connection credentials.
+    WhatsApp API URL for sending messages.
+Run the script from the command line or set up a scheduled task to execute it periodically.
+
+# Uso
+
+The script connects to the database and retrieves active ticket_ids.
+For each ticket, it checks its status in the GLPI API.
+If the ticket is closed, it removes it from the database.
+Retrieves follow-up messages and checks for new messages.
+If there are new messages, they are sent to the associated WhatsApp number.
+Logs all actions in a log file.
+Script uses cron in the server.
+
+# Autor
+
+**Vladyslav Zgarbov Kaplun**
+
+This script was developed to automate ticket management and notification of updates via WhatsApp.
+
+## Licencia
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contacto
+
+If you have any questions or suggestions, feel free to contact the author at  97vlad97@gmail.com.
